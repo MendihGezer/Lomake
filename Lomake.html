@@ -15,11 +15,11 @@
 
     <h1>Kirjautumislomake</h1>
 
-    <form class="center" action="/admin/process-form.php" method="POST"
-    onSubmit="return Laheta(this)" onReset="return Tyhjennys(this)">
+    <form method="post" class="center" action="/admin/process-form.php"
+    onsubmit="return Laheta(this)" onreset="return Tyhjennys(this)">
 
         <p><label>Nimi:</label><br>
-            <input type="text" name="<nimi" maxlength="64" placeholder="nimi">
+            <input type="text" name="<Nimi" maxlength="64" placeholder="Nimi">
         </p>
         <p><label>Ikä:</label><br>
             <input type="text" name="ika" maxlength="2">
@@ -45,7 +45,7 @@
 <p>Anna sähköpostiosoite:</p>
     <input type="text" name="Email" value="" maxlength="35"><br>
 <p>
-      <input type="submit" value="Lähetä" onsubmit="Laheta">
+      <input type="submit" value="Lähetä">
       <input type="reset" value="Tyhjennä">
 </p>
 </form>
