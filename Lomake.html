@@ -7,7 +7,10 @@
 <h1 class="center">Kirjautumislomake</h1>
   </head>
   <body>
+    <script type="text/javascript" src = "lomake.js">;
 
+    
+           </script>
     <form action="/admin/process-form.php" method="POST">
         <p>
             <label>Nimi:</label>
@@ -20,11 +23,14 @@
             <input type="text" name="ika">
         </p>
         <p>
-            <input type="submit" value="Laheta">
+             <label>Henikötunnus:</label>
+            <br>
+            <input type="text" name="henk">
         </p>
+
     </form>
 <p>Valitse sukupuoli</p>
-<form>
+<form class="center">
   <input type="radio" id="mies" name="gender" value="mies">
   <label for="mies">Mies</label><br>
   <input type="radio" id="nainen" name="gender" value="nainen">
@@ -36,13 +42,16 @@
 
 
       <p>Valitse syntymäaika:</p>
-      <form>
+     <form  class="center">
                   <input type="date"><br>
              </form>
 
-           <form action="/action_page.php">
+           <form class="center" action="/action_page.php">
              <label for="email">Anna sähköpostiosoite:</label><br>
               <input type="text" id="email" name="email" value=""><br>
-
+              <p>
+                  <input type="submit" value="Laheta">
+              </p>
+            <script
   </body>
 </html>
