@@ -31,11 +31,11 @@
     </form>
 <p>Valitse sukupuoli</p>
 <form class="center">
-  <input type="radio" id="mies" name="gender" value="mies">
+  <input type="radio" id="mies" name="gender" value="mies" maxlength="4">
   <label for="mies">Mies</label><br>
-  <input type="radio" id="nainen" name="gender" value="nainen">
+  <input type="radio" id="nainen" name="gender" value="nainen" maxlength="6">
   <label for="nainen">Nainen</label><br>
-  <input type="radio" id="muu" name="gender" value="muu">
+  <input type="radio" id="muu" name="gender" value="muu" maxlength="3">
   <label for="muu">muu</label>
 </form>
 
@@ -48,7 +48,7 @@
 
            <form class="center" action="/action_page.php">
              <label for="email">Anna sähköpostiosoite:</label><br>
-              <input type="text" id="email" name="email" value=""><br>
+              <input type="text" id="email" name="email" value="" maxlength="35"><br>
               <p>
                   <input type="submit" value="Laheta">
               </p>
