@@ -9,23 +9,23 @@
   <body>
     <script type="text/javascript" src = "lomake.js">;
 
-    
+
            </script>
     <form action="/admin/process-form.php" method="POST">
         <p>
             <label>Nimi:</label>
             <br>
-            <input type="text" name="nimi">
+            <input type="text" name="nimi" maxlength="64">
         </p>
         <p>
              <label>Ikä:</label>
             <br>
-            <input type="text" name="ika">
+            <input type="text" name="ika" maxlength="2">
         </p>
         <p>
-             <label>Henikötunnus:</label>
+             <label>Henkilötunnus:</label>
             <br>
-            <input type="text" name="henk">
+            <input type="text" name="henk" maxlength="11">
         </p>
 
     </form>
