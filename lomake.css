@@ -5,31 +5,38 @@ body {
 .center {
   text-align: center;
   color: black;
+
 }
 
 p {
   text-align: center;
   color: red;
-
 }
-div.form
-{
+
+div.form  {
     display: block;
     text-align: center;
-
 }
+
 h1 {
 font-family: 'Shadows Into Light', cursive;
 text-align: center;
-
 }
+
 form {
 display: block;
 }
+
 input {
 font-size: inherit;
 }
+
 input[type="text"] {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+input[type="date"] {
   display: inline-block;
   border: 1px solid black;
 }
