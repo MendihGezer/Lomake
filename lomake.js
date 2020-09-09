@@ -10,14 +10,17 @@ return false
 }
 
 }
+/*Lomakkeen kenttien varsinainen tarkistus*/
+
 function Laheta(form)
 {
-  var Nimi = document.forms["Nimi"].value;
 
-  if(Nimi.length<2)
-  {
-  alert("Et antanut nimeäsi!");
-  form.Nimi.focus();
-  return false;
-  }
+var nimi=form.Etunimi.value;
+
+if(nimi.length<2)
+{
+alert("Et antanut etunimeäsi!");
+form.nimi.focus();
+return false;
+}
 }
