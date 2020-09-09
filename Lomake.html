@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="lomake.css">
 <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
-
 <script type="text/javascript" src="lomake.js"></script>
 
   </head>
@@ -15,8 +14,8 @@
 
     <h1>Kirjautumislomake</h1>
 
-    <form method="post" action="/admin/process-form.php"
-    onsubmit="return Laheta(this)" onreset="return Tyhjennys(this)">
+<form method="post" action="/admin/process-form.php" onsubmit="return Laheta()"
+onreset="return Tyhjennys(this)">
 
 
 <p>Nimi:</p>
@@ -26,7 +25,7 @@
         <input type="text" name="ika" value="" maxlength="3" placeholder="Ikä">
         <label for="ika"></label>
 <p>Henkilötunnus:</p>
-        <input type="text" name="henk" value="" maxlength="11">
+        <input type="text" name="henk" value="" maxlength="11" >
         <label for="henk"></label>
 
 <p>Valitse sukupuoli</p>
