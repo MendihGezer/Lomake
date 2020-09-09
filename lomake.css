@@ -2,8 +2,6 @@
 body {
   background-color: #E6E6FA	;
 }
-
-
 .center {
   text-align: center;
   color: black;
@@ -12,4 +10,26 @@ body {
 p {
   text-align: center;
   color: red;
+
+}
+div.form
+{
+    display: block;
+    text-align: center;
+
+}
+h1 {
+font-family: 'Shadows Into Light', cursive;
+text-align: center;
+
+}
+form {
+display: block;
+}
+input {
+font-size: inherit;
+}
+input[type="text"] {
+  display: inline-block;
+  border: 1px solid black;
 }
