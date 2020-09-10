@@ -4,7 +4,9 @@ function Tarkista(form)
 var nimi = form.nimi.value;
 var ika = form.ika.value;
 var henk = form.henk.value;
+var email = form.email.value;
 var gender = form.gender;
+
 
 if(nimi.length<2)
 {
@@ -24,13 +26,6 @@ alert("Et antanut henkilötunnustasi");
 form.henk.focus();
 return false
 }
-if(form.email.value.indexOf('@',0) == -1)
-{
-alert("Et antanut sähköpostiosoitettasi tai se on virheellinen!");
-form.email.focus();
-return false;
-}
-
 var vastaus=false;
 
 for (var i=0; i < gender.length;i++)
@@ -45,7 +40,14 @@ if(vastaus==false)
 alert("Et valinnut sukupuolta!");
 return false;
 }
+if(form.email.value.indexOf('@',0) == -1)
+{
+alert("Et antanut sähköpostiosoitettasi tai se on virheellinen!");
+form.email.focus();
+return false;
 }
+}
+
 
 function Tyhjenna(form)
 {
