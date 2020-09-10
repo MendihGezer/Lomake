@@ -21,6 +21,6 @@ var nimi=form.nimi.value;
 if(nimi.length<2)
 {
 alert("Et antanut etunimeäsi!");
-form.nimi.focus();
+form.Etunimi.focus();
 return false;
 }
