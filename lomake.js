@@ -1,6 +1,6 @@
 /*Tyhjennä lomake-tarkistus*/
 
-function Tyhjennä(form)
+function Tyhjenna(form)
 {
 var tyhj=form.value;
 
