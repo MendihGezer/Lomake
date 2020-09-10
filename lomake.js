@@ -24,3 +24,4 @@ alert("Et antanut etunimeäsi!");
 form.nimi.focus();
 return false;
 }
+}
