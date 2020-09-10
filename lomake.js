@@ -8,5 +8,3 @@ if (!confirm("Haluatko varmasti tyhjentää kaikki kentät?"))
 {
 return false
 }
-
-}
