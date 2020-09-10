@@ -58,3 +58,12 @@ if (!confirm("Haluatko varmasti tyhjentää kaikki kentät?"))
 return false
 }
 }
+
+
+var intVastaus=-1;
+
+for (var i=0; i < form.Vastaus.length;i++) {
+if (form.Vastaus[i].checked==true) {
+intVastaus=i;
+}
+}
