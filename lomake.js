@@ -25,3 +25,42 @@ form.nimi.focus();
 return false;
 }
 }
+
+function Tarkista(form)
+{
+
+var ika=form.ika.value;
+
+if(ika.length<1)
+{
+alert("Et antanut ikääsi!");
+form.ika.focus();
+return false;
+}
+}
+
+function Tarkista(form)
+{
+
+var henk=form.henk.value;
+
+if(henk.length<2)
+{
+alert("Et antanut henkilötunnustasi!");
+form.henk.focus();
+return false;
+}
+}
+
+function Tarkista(form)
+{
+
+var henk=form.henk.value;
+
+if(form.email.value.indexOf('@',0) == -1)
+{
+alert("Et antanut sähköpostiosoitettasi tai se on virheellinen!");
+form.email.focus();
+return false;
+}
+}
