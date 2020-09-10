@@ -1,6 +1,6 @@
 /*Tyhjennä lomake-tarkistus*/
 
-function Tyhjennys(form)
+function Tyhjennä(form)
 {
 var tyhj=form.value;
 
@@ -8,15 +8,19 @@ if (!confirm("Haluatko varmasti tyhjentää kaikki kentät?"))
 {
 return false
 }
-
 }
+
+
+/*Lomakkeen kenttien varsinainen tarkistus*/
+
 function Tarkista(form)
+{
 
-var nimi = form.nimi.value;
+var nimi=form.nimi.value;
 
-
-if (nimi.length<2) {
-alert("Et antanut nimeäsi");
+if(nimi.length<2)
+{
+alert("Et antanut etunimeäsi!");
 form.nimi.focus();
 return false;
 }
