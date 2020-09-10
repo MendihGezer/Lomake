@@ -1,3 +1,12 @@
-<form action="" name="myForm">
-<input type="TEXT" name="phoneNumber" id="phoneNumber" value="" />
-</form>
+/*Tyhjennä lomake-tarkistus*/
+
+function Tyhjennys(form)
+{
+var tyhj=form.value;
+
+if (!confirm("Haluatko varmasti tyhjentää kaikki kentät?"))
+{
+return false
+}
+
+}

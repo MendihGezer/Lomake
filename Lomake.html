@@ -4,54 +4,52 @@
     <meta charset="utf-8">
     <title></title>
 <link rel="stylesheet" type="text/css" href="lomake.css">
-<h1 class="center">Kirjautumislomake</h1>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="lomake.js"></script>
+
   </head>
+
   <body>
-    <script type="text/javascript" src = "lomake.js">;
+
+    <h1>Kirjautumislomake</h1>
+
+<form method="post" action="/admin/process-form.php" onsubmit="return Laheta()"
+onreset="return Tyhjennys(this)">
 
 
-           </script>
-    <form action="/admin/process-form.php" method="POST">
-        <p>
-            <label>Nimi:</label>
-            <br>
-            <input type="text" name="nimi">
-        </p>
-        <p>
-             <label>Ikä:</label>
-            <br>
-            <input type="text" name="ika">
-        </p>
-        <p>
-             <label>Henikötunnus:</label>
-            <br>
-            <input type="text" name="henk">
-        </p>
+<p>Nimi:</p>
+        <input type="text" name="nimi" value="" maxlength="64" placeholder="Nimi">
+        <label for="mies"></label>
+<p>Ikä:</p>
+        <input type="text" name="ika" value="" maxlength="3" placeholder="Ikä">
+        <label for="ika"></label>
+<p>Henkilötunnus:</p>
+        <input type="text" name="henk" value="" maxlength="11" >
+        <label for="henk"></label>
 
-    </form>
 <p>Valitse sukupuoli</p>
-<form class="center">
-  <input type="radio" id="mies" name="gender" value="mies">
+  <input type="radio" id="mies" name="gender" value="mies" maxlength="4">
   <label for="mies">Mies</label><br>
-  <input type="radio" id="nainen" name="gender" value="nainen">
+  <input type="radio" id="nainen" name="gender" value="nainen" maxlength="6">
   <label for="nainen">Nainen</label><br>
-  <input type="radio" id="muu" name="gender" value="muu">
-  <label for="muu">muu</label>
+  <input type="radio" id="muu" name="gender" value="muu" maxlength="3">
+  <label for="muu">muu</label><br>
+
+
+<p>Valitse syntymäaika:</p>
+
+    <input type="date" maxlength="8">
+    <label for="email"></label><br>
+
+<p>Anna sähköpostiosoite:</p>
+    <input type="text" name="email" value="" maxlength="35"><br>
+<p>
+      <input type="submit" value="Lähetä">
+      <input type="reset" value="Tyhjennä">
+</p>
 </form>
 
 
-
-      <p>Valitse syntymäaika:</p>
-     <form  class="center">
-                  <input type="date"><br>
-             </form>
-
-           <form class="center" action="/action_page.php">
-             <label for="email">Anna sähköpostiosoite:</label><br>
-              <input type="text" id="email" name="email" value=""><br>
-              <p>
-                  <input type="submit" value="Laheta">
-              </p>
-            <script
   </body>
 </html>
