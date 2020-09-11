@@ -13,6 +13,8 @@
     <h1 id="otsikko">Kyselylomake</h1>
 <p>Täytä alla oleva lomake hakeaksesi työpaikkaa kanssamme</p>
 
+<h4>Henkilökohtaisia tietoja</h4>
+
   <p>Nimi:</p>
           <input type="text" name="etunimi" value="" maxlength="64" placeholder="Etunimi">
           <label for="etunimi"></label>
@@ -46,6 +48,17 @@
       <input type="date" maxlength="8" name="date">
       <label for="email"></label><br>
 
+<h4>Hakemuksesi</h4>
+
+<p>Valitse työ</p>
+<label for="works">Valitse työpaikkaa:</label>
+<select id="works" name="worklist" form="worksform">
+  <option value="valitse">Valtse</option>
+  <option value="salesmanag">Myyntipäällikkö</option>
+  <option value="toimitusjohtaja">Toimitusjohtaja</option>
+  <option value="tuki">Käytöntuki</option>
+
+</select>
 
   <p>
         <input type="submit" name="submit" value="Tarkista">
