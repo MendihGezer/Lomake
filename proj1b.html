@@ -50,15 +50,20 @@
 
 <h4>Hakemuksesi</h4>
 
-<p>Valitse työ</p>
+
 <label for="works">Valitse työpaikkaa:</label>
 <select id="works" name="worklist" form="worksform">
   <option value="valitse">Valtse</option>
   <option value="salesmanag">Myyntipäällikkö</option>
   <option value="toimitusjohtaja">Toimitusjohtaja</option>
-  <option value="tuki">Käytöntuki</option>
+  <option value="tuki">Tukihenkilö</option><br>
 
-</select>
+  <br><p>Työn tyyppi</p>
+
+    <input type="radio" name="worktime" value="fulltime" maxlength="4">Kokoaikainen<br>
+    <input type="radio" name="worktime" value="parttime" maxlength="6">Osa-aikatyö<br>
+    <input type="radio" name="worktime" value="lessthan3" maxlength="3">Alle 3 päivää viikossa<br>
+
 
   <p>
         <input type="submit" name="submit" value="Tarkista">
