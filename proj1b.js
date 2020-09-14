@@ -7,6 +7,9 @@ var osoite = form.osoite.value;
 var kotikunta = form.kotikunta.value;
 var email = form.email.value;
 var pnumero = form.pnumero.value;
+var gender = form.gender;
+var date = form.date.value;
+
 
 if(etunimi.length<2)
 {
@@ -38,13 +41,37 @@ if(email.indexOf("@") == -1)
 	form.email.focus();
   return false;
 }
-if(pnumero = "(+358{9})")
+if(pnumero.length<9)
 {
   alert("Et antanut numeroasi!");
   form.pnumero.focus();
     return false;
 }
+var vastaus=false;
 
+for (var i=0; i < gender.length;i++)
+{
+if (gender[i].checked==true)
+{
+vastaus=true;
+}
+}
+if(vastaus==false)
+{
+alert("Et valinnut sukupuolta!");
+return false;
+}
+if (date == "")
+{
+  alert("Et antanut syntymäaikaasi")
+  form.date.focus();
+  return false;
+}
+if (date == '')
+{
+  alert("Et antanut syntymäaikaasi")
+  return false;
+}
 
 
 

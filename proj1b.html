@@ -51,23 +51,26 @@
   <p>Valitse syntymäaika:</p>
 
       <input type="date" maxlength="8" name="date">
-      <label for="email"></label><br>
+      <label for="date"></label><br>
 
 <h4>Hakemuksesi</h4>
 
 
-<label for="works">Valitse työpaikkaa:</label>
+<label for="works">Valitse työpaikkaa:</label><br>
 <select id="works" name="worklist" form="worksform">
   <option value="valitse">Valtse</option>
   <option value="salesmanag">Myyntipäällikkö</option>
   <option value="toimitusjohtaja">Toimitusjohtaja</option>
-  <option value="tuki">Tukihenkilö</option><br>
+  <option value="tuki">Tukihenkilö</option>
 
-  <br><p>Työn tyyppi</p>
+  <p>Työn tyyppi</p>
 
-    <input type="radio" name="worktime" value="fulltime" maxlength="4">Kokoaikainen<br>
-    <input type="radio" name="worktime" value="parttime" maxlength="6">Osa-aikatyö<br>
-    <input type="radio" name="worktime" value="lessthan3" maxlength="3">Alle 3 päivää viikossa<br>
+    <input type="radio" name="worktime" value="kokoaikainen" maxlength="4">
+    <label for="kokoaikainen">Kokoaikainen</label><br>
+    <input type="radio" name="worktime" value="parttime" maxlength="6">
+    <label for="parttime">Osa-aikatyö</label><br>
+    <input type="radio" name="worktime" value="lessthan3" maxlength="3">
+    <label for="parttime">Alle 3 päivää viikossa</label><br>
 
 
   <p>
