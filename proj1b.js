@@ -5,37 +5,44 @@ var etunimi = form.etunimi.value;
 var sukunimi = form.sukunimi.value;
 var osoite = form.osoite.value;
 var kotikunta = form.kotikunta.value;
+var email = form.email.value;
 var pnumero = form.pnumero.value;
 
 if(etunimi.length<2)
 {
-alert("Et antanut etunimeäsi!");
-form.etunimi.focus();
-return false;
+  alert("Et antanut etunimeäsi!");
+  form.etunimi.focus();
+    return false;
 }
 if(sukunimi.length<2)
 {
-alert("Et antanut sukunimeäsi!");
-form.sukunimi.focus();
-return false;
+  alert("Et antanut sukunimeäsi!");
+  form.sukunimi.focus();
+    return false;
 }
 if(osoite.length<2)
 {
-alert("Et antanut osoitettasi!");
-form.osoite.focus();
-return false;
+  alert("Et antanut osoitettasi!");
+  form.osoite.focus();
+    return false;
 }
 if(kotikunta.length<2)
 {
-alert("Et antanut kotikuntaasi!");
-form.kotikunta.focus();
-return false;
+  alert("Et antanut kotikuntaasi!");
+  form.kotikunta.focus();
+    return false;
+}
+if(email.indexOf("@") == -1)
+{
+	alert("Antamasi sähköpostiosoite ei ole kelvollinen!");
+	form.email.focus();
+  return false;
 }
 if(pnumero = "(+358{9})")
 {
-alert("Et antanut numeroasi!");
-form.pnumero.focus();
-return false;
+  alert("Et antanut numeroasi!");
+  form.pnumero.focus();
+    return false;
 }
 
 
