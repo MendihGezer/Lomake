@@ -9,7 +9,7 @@ var email = form.email.value;
 var pnumero = form.pnumero.value;
 var gender = form.gender;
 var date = form.date.value;
-
+var worksform = form.worksform;
 
 if(etunimi.length<2)
 {
@@ -72,7 +72,9 @@ if (date == '')
   alert("Et antanut syntymäaikaasi")
   return false;
 }
+if (worksform) {
 
+}
 
 
 }
