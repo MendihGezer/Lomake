@@ -9,6 +9,7 @@ var email = form.email.value;
 var pnumero = form.pnumero.value;
 var gender = form.gender;
 var date = form.date.value;
+var jobs= form.jobs.value;
 var worktime = form.worktime;
 
 
@@ -68,6 +69,13 @@ if (date == "")
   form.date.focus();
   return false;
 }
+var jobs = document.getElementById('jobs');
+    if(!jobs.value) {
+        window.alert('Valitse työtehtävä');
+        form.jobs.focus();
+        jobs.value = ''
+        return false;
+    }
 var vastaus=false;
 
 for (var i=0; i < worktime.length;i++)
