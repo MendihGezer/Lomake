@@ -45,11 +45,12 @@
 		<br>
 		<input type="button" name="clear" value="c" OnClick="calc.input.value = ''">
 		<input type="button" name="nolla" value="0" OnClick="calc.input.value += '0'">
-		<input type="button" name="doit" value="=" OnClick="calc.input.value = eval(calc.input.value)">
+    <input type="button" name="prosentti" value="%" Onclick="calc.input.value +='%'">
+
 		<input type="button" name="div"  value="/" OnClick="calc.input.value += '/'">
     <br>
-    <input type="button" name="prosentti" value="%" Onclick="calc.input.value +='%'">
-    <input type="button" name="pilkku" value="," OnClick="calc.input.value += ','">
+    <input type="button" name="piste" value="." OnClick="calc.input.value += '.'">
+    <input type="button" name="doit" class="gror" value="=" OnClick="calc.input.value = eval(calc.input.value)">
 
 
 	</td>
