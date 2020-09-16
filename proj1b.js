@@ -9,7 +9,7 @@ var email = form.email.value;
 var pnumero = form.pnumero.value;
 var gender = form.gender;
 var date = form.date.value;
-var worksform = form.worksform;
+var select = form.select.value;
 
 if(etunimi.length<2)
 {
@@ -41,7 +41,7 @@ if(email.indexOf("@") == -1)
 	form.email.focus();
   return false;
 }
-if(pnumero.length<9)
+if(pnumero == "")
 {
   alert("Et antanut numeroasi!");
   form.pnumero.focus();
@@ -63,20 +63,10 @@ return false;
 }
 if (date == "")
 {
-  alert("Et antanut syntymäaikaasi")
+  alert("Et antanut syntymäaikaasi");
   form.date.focus();
   return false;
 }
-if (date == '')
-{
-  alert("Et antanut syntymäaikaasi")
-  return false;
-}
-if (worksform) {
-
-}
-
-
 }
 
 
