@@ -8,3 +8,9 @@ input[type="text"] {
   width: 440px;
 
 }
+
+.gror {
+    width:150px; height: 100px;
+    background: navy; /* väri */
+    color: white; /* valkoiset kirjaimet */
+}
