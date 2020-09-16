@@ -4,3 +4,7 @@
 input.display {width: 166px; text-align: right;}
 td.buttons {border-top: solid 1px silver;}
 input[type= button] {width:100px; height: 100px;}
+input[type="text"] {
+  width: 440px;
+
+}
