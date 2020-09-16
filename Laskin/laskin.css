@@ -1,0 +1,6 @@
+#calculator * {font-size: 50px;}
+#calculator table {border: solid 3px grey; border-spacing: 3px; background-color: #C3EBC9; }
+#calculator table td {border-spacing: 3px;}
+input.display {width: 166px; text-align: right;}
+td.buttons {border-top: solid 1px silver;}
+input[type= button] {width:100px; height: 100px;}
