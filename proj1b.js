@@ -9,7 +9,6 @@ var email = form.email.value;
 var pnumero = form.pnumero.value;
 var gender = form.gender;
 var date = form.date.value;
-var select = form.select.value;
 var worktime = form.worktime;
 
 
