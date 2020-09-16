@@ -11,7 +11,7 @@ var date = form.date.value;
 
 if(nimi.length<2)
 {
-alert("Et antanut nimeäsi!");
+  alert("Et antanut nimeäsi!");
 form.nimi.focus();
 return false;
 }
