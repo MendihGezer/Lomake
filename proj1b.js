@@ -10,6 +10,8 @@ var pnumero = form.pnumero.value;
 var gender = form.gender;
 var date = form.date.value;
 var select = form.select.value;
+var worktime = form.worktime;
+
 
 if(etunimi.length<2)
 {
@@ -67,8 +69,21 @@ if (date == "")
   form.date.focus();
   return false;
 }
-}
+var vastaus=false;
 
+for (var i=0; i < worktime.length;i++)
+{
+if (worktime[i].checked==true)
+{
+vastaus=true;
+}
+}
+if(vastaus==false)
+{
+alert("Valitse työn tyyppi!");
+return false;
+}
+}
 
 
 
