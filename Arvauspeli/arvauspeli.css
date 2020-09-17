@@ -1,4 +1,9 @@
 body {
+ background-image: url("background--numbers.jpg");
+ background-color: #cccccc;
+}
+
+body {
 width: 50%;
 max-width: 800px;
 min-width: 480px;
