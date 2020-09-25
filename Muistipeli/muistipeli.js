@@ -1,9 +1,5 @@
 window.onload=tailGeneration;
 
-			var click = new Audio("sound/click.mp3");
-			var traf= new Audio("sound/done.mp3");
-			var win= new Audio("sound/win2.mp3");
-
 
 			function tailGeneration()
 			{
@@ -119,7 +115,6 @@ window.onload=tailGeneration;
 					maaraAvaa=maaraAvaa-2;
 
 				}
-				else click.play();
 			}
 
 			function closeTail(numerTail)
@@ -129,11 +124,10 @@ window.onload=tailGeneration;
 
 			}
 
-			var licznik=0;
+			var laskuri=0;
 			function trafione(firstTail,secondTail)
 			{
 
-				traf.play();
 
 				document.getElementById("ta"+firstTail).innerHTML=null;
 				document.getElementById("ta"+firstTail).style.boxShadow="none";
@@ -149,10 +143,9 @@ window.onload=tailGeneration;
 				document.getElementById("ta"+secondTail).style.width="202px";
 				document.getElementById("ta"+secondTail).style.height="202px";
 
-				licznik++
-				if(licznik==10)
+				laskuri++
+				if(laskuri==10)
 				{
-					win.play();
 					document.getElementById("tytul").innerHTML='<span id="bravo">Congratulations !!! </span><br /> <input type="button" value="Pelata vielä kerran" onclick="location.reload()">';
 					document.getElementById("tytul").style.paddingTop="100px";
 					document.getElementById("bravo").style.fontSize="48px";
