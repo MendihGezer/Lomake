@@ -1,53 +1,162 @@
-function generateArray(count) {
-  var result = Array(count * 2);
-  for (var i = 0; i < count; i++) {
-    result[i * 2] = i + 1;
-    result[i * 2 + 1] = i + 1;
-  }
-  return result;
-}
+window.onload=tailGeneration;
 
-function shuffle(array) {
-  var counter = array.length;
-  while (counter > 0) {
-    var index = Math.floor(Math.random() * counter);
-    counter--;
-    var temp = array[counter];
-    array[counter] = array[index];
-    array[index] = temp;
-  }
-  return array;
-}
+			var click = new Audio("sound/click.mp3");
+			var traf= new Audio("sound/done.mp3");
+			var win= new Audio("sound/win2.mp3");
 
-var images = '';
-//lisään kuvia tähän myöhemmin
 
-function generateFirstGame () {
-  var myGame = document.createElement("table");
-  var myGameId = document.getElementById("game");
-  var rows = 4;
-  var columns = 4;
-  var gameArray = generateArray(rows * columns / 2);
-  shuffle(gameArray);
+			function tailGeneration()
+			{
+				var divs = "";
+				for(i=1;i<=20;i++)
+				{
+					divs = divs +'<div class="tail" id="ta'+i+'" ><img src="img/locked.png" onclick="openTail('+i+')" /></div>';
 
-  for (var i = 0; i < rows; i++) {
-    var row = $('<tr></tr>').appendTo(myGame);
+					if (i%5==0) divs = divs +'<div style="clear:both" ></div>';
 
-  for (var j = 0; j < columns; j++) {
-    var imageUrl = images + gameArray[i * columns + j] + '.png';
-     $('<td></td>')
-       .css('background-image', 'url(' + imageUrl + ')')
-       .appendTo(row);
-    }
-  }
+				}
 
-  myGameId.innerHTML='';
-  myGameId.appendChild(myGame);
-  $("td").attr("class", "closed");
+				document.getElementById("tresc").innerHTML=divs;
 
-$('td').click(function() {
-    var $element = $(this);
-    $element.toggleClass('closed');
+				generate();
 
-  });
-}
+			}
+
+
+
+			var openId = new Array(3);
+			var openPict = new Array(3);
+
+
+
+
+			var pictures =new Array(20);
+
+
+
+			function generate()
+			{
+
+				for (i=0;i<10;i++)
+				{
+					pictures[i]=i+1;
+				}
+
+				for (i=10;i<20;i++)
+				{
+					pictures[i]=i-9;
+				}
+
+				var step =20;
+				var images =new Array(20);
+
+				for (i=0;i<20;i++)
+				{
+					var numerK = Math.floor(Math.random() * step);
+
+					images[i]=pictures[numerK];
+					pictures[numerK]=pictures[step-1];
+					step=step-1;
+
+				}
+				pictures=images;
+
+
+			}
+
+			var maaraAvaa = 0;
+
+			function openTail(nr)
+			{
+
+				var pictureNr = pictures[nr-1];
+
+				document.getElementById("ta"+nr).innerHTML='<img height="200px" width="200px" src="img/im'+pictureNr+'.png" />'
+
+
+
+				maaraAvaa++;
+
+
+				if (maaraAvaa==1)
+				{
+					openPict[0]=pictures[nr-1];
+
+					openId[0]=nr;
+				}
+				else if (maaraAvaa==2)
+				{
+					openPict[1]=openPict[0];
+					openPict[0]=pictures[nr-1];
+
+					openId[1]=openId[0];
+					openId[0]=nr;
+
+				}
+				else if (maaraAvaa==3)
+				{
+					openPict[2]=openPict[1];
+					openPict[1]=openPict[0];
+					openPict[0]=pictures[nr-1];
+
+					openId[2]=openId[1];
+					openId[1]=openId[0];
+					openId[0]=nr;
+
+				}
+
+				if (maaraAvaa>2)
+				{
+					closeTail(openId[2]);
+					maaraAvaa=maaraAvaa-1;
+
+
+				}
+
+				if(openPict[0]==openPict[1])
+				{
+					trafione(openId[0],openId[1]);
+					maaraAvaa=maaraAvaa-2;
+
+				}
+				else click.play();
+			}
+
+			function closeTail(numerTail)
+			{
+
+				document.getElementById("ta"+numerTail).innerHTML='<img src="img/locked.png" onclick="openTail('+numerTail+')" />';
+
+			}
+
+			var licznik=0;
+			function trafione(firstTail,secondTail)
+			{
+
+				traf.play();
+
+				document.getElementById("ta"+firstTail).innerHTML=null;
+				document.getElementById("ta"+firstTail).style.boxShadow="none";
+				document.getElementById("ta"+firstTail).style.background="none";
+				document.getElementById("ta"+firstTail).style.border="none";
+				document.getElementById("ta"+firstTail).style.width="202px";
+				document.getElementById("ta"+firstTail).style.height="202px";
+
+				document.getElementById("ta"+secondTail).innerHTML=null;
+				document.getElementById("ta"+secondTail).style.boxShadow="none";
+				document.getElementById("ta"+secondTail).style.background="none";
+				document.getElementById("ta"+secondTail).style.border="none";
+				document.getElementById("ta"+secondTail).style.width="202px";
+				document.getElementById("ta"+secondTail).style.height="202px";
+
+				licznik++
+				if(licznik==10)
+				{
+					win.play();
+					document.getElementById("tytul").innerHTML='<span id="bravo">Congratulations !!! </span><br /> <input type="button" value="Pelata vielä kerran" onclick="location.reload()">';
+					document.getElementById("tytul").style.paddingTop="100px";
+					document.getElementById("bravo").style.fontSize="48px";
+
+
+				}
+			}
